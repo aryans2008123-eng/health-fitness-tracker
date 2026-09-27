@@ -17,12 +17,9 @@ function LandingPage({ onGetStarted, onOpenContact }) {
 
       <header className="topbar">
         <div className="brand" aria-label="VitaliFit logo">
-          <span className="brand-mark" aria-hidden="true">
-            <span className="brand-v">V</span>
-            <span className="leaf-spark leaf-left" />
-            <span className="leaf-spark leaf-right" />
-          </span>
+          <span className="brand-leaf brand-leaf-left" aria-hidden="true" />
           <span className="brand-text">VitaliFit</span>
+          <span className="brand-leaf brand-leaf-right" aria-hidden="true" />
         </div>
 
         <nav className="nav">
