@@ -1,6 +1,6 @@
 import './LandingPage.css';
 
-function LandingPage() {
+function LandingPage({ onGetStarted }) {
   return (
     <div className="landing-page">
       <header className="topbar">
@@ -22,7 +22,7 @@ function LandingPage() {
           </p>
 
           <div className="cta-row">
-            <button className="primary-btn">Get Started</button>
+            <button className="primary-btn" onClick={onGetStarted}>Get Started</button>
             <button className="secondary-btn">View Plans</button>
           </div>
 
