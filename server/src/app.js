@@ -25,6 +25,16 @@ app.use(
 );
 
 app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    app: 'Health & Fitness Tracker API',
+    message: 'This is the backend API. Use /api/health to check server status.',
+    endpoints: ['/api/health'],
+  });
+});
+
 app.use('/api', healthRoutes);
 
 app.use((err, req, res, next) => {

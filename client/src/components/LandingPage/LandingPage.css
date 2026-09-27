@@ -1,0 +1,260 @@
+:root {
+  --bg: #f3f7ff;
+  --panel: #ffffff;
+  --primary: #1d4ed8;
+  --primary-dark: #163ea8;
+  --text: #122033;
+  --muted: #5a6b82;
+  --card: #edf4ff;
+  --accent: #d9f7e8;
+  --shadow: 0 18px 45px rgba(29, 78, 216, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: linear-gradient(180deg, #f3f7ff 0%, #eefaf5 100%);
+  color: var(--text);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.landing-page {
+  min-height: 100vh;
+}
+
+.topbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 28px 80px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.badge {
+  display: inline-block;
+  background: #dfe9ff;
+  color: var(--primary);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+}
+
+.hero-copy p {
+  margin: 18px 0 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 600px;
+}
+
+.cta-row {
+  margin-top: 28px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.primary-btn:hover {
+  background: var(--primary-dark);
+}
+
+.secondary-btn {
+  background: #fff;
+  color: var(--text);
+  border: 1px solid #dfe7f1;
+}
+
+.stats-row {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.stats-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stats-row strong {
+  font-size: 1.5rem;
+}
+
+.stats-row span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mini-card {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 22px 20px;
+  border: 1px solid #dfeafc;
+}
+
+.mini-card.accent {
+  background: var(--accent);
+  border-color: #bfe9ce;
+}
+
+.mini-card .label {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.mini-card h3 {
+  margin: 10px 0 6px;
+  font-size: 2rem;
+}
+
+.mini-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.feature-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px 80px;
+}
+
+.section-heading {
+  margin-bottom: 26px;
+}
+
+.section-heading span {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.76rem;
+}
+
+.section-heading h2 {
+  margin: 10px 0 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.feature-box {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e3ecfd;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.feature-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 840px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

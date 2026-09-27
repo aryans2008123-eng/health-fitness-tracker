@@ -1,7 +1,7 @@
-import HealthStatus from './components/HealthStatus/HealthStatus';
+import LandingPage from './components/LandingPage/LandingPage';
 
 function App() {
-  return <HealthStatus />;
+  return <LandingPage />;
 }
 
 export default App;
