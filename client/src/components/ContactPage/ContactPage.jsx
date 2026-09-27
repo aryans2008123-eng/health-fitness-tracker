@@ -10,11 +10,11 @@ function ContactPage({ onBack }) {
         <h1>Get in touch</h1>
 
         <p className="contact-summary">
-          For more information, contact: Aryan Saxena (aryans2008123@gmail.com) for personal inquiries and work related enquiries. For professional and institutional enquiries: (26f2005721@ds.study.iitm.ac.in).
+          For more information, contact: Aryan Saxena (aryans2008123@gmail.com) for personal enquiries and work related enquiries. For professional and institutional enquiries: (26f2005721@ds.study.iitm.ac.in).
         </p>
 
         <div className="contact-box">
-          <p>Personal inquiries</p>
+          <p>Personal enquiries</p>
           <strong>Aryan Saxena</strong>
           <a href="mailto:aryans2008123@gmail.com">aryans2008123@gmail.com</a>
         </div>

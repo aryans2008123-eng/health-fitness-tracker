@@ -1,8 +1,13 @@
+import { useState } from 'react';
 import './LandingPage.css';
 
 function LandingPage({ onGetStarted, onOpenContact }) {
+  const [showPlans, setShowPlans] = useState(false);
+
   const scrollToFeatures = () => {
-    document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+    const targetId = showPlans ? 'plans' : 'features';
+    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+    setShowPlans(true);
   };
 
   return (
@@ -103,6 +108,34 @@ function LandingPage({ onGetStarted, onOpenContact }) {
           </article>
         </div>
       </section>
+
+      {showPlans && (
+        <section id="plans" className="plans-section">
+          <div className="section-heading">
+            <span>Plans</span>
+            <h2>Simple support for everyone.</h2>
+          </div>
+
+          <div className="plan-card">
+            <div className="plan-head">
+              <span className="plan-badge">Free</span>
+              <span className="plan-price">$0</span>
+            </div>
+
+            <p className="plan-message">
+              VitaliFit is designed to be a free and accessible app for everyone.
+            </p>
+
+            <ul className="plan-features">
+              <li>Track workouts and movement goals</li>
+              <li>Log nutrition, hydration, and daily habits</li>
+              <li>Monitor health progress with simple insight cards</li>
+              <li>Follow personalised wellness routines</li>
+              <li>Stay consistent with lightweight daily check-ins</li>
+            </ul>
+          </div>
+        </section>
+      )}
     </div>
   );
 }
