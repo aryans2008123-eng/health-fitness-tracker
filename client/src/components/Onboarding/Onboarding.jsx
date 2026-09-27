@@ -40,7 +40,7 @@ function Onboarding({ profile, onSave, onBack }) {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!formData.name || !formData.weight || !formData.height) {
@@ -48,14 +48,21 @@ function Onboarding({ profile, onSave, onBack }) {
       return;
     }
 
-    onSave({
+    const profilePayload = {
       ...formData,
       weight: Number(formData.weight),
       height: Number(formData.height),
       age: Number(formData.age || 0),
-    });
+    };
 
-    setMessage('Profile saved successfully.');
+    setMessage('Saving profile...');
+
+    try {
+      await onSave(profilePayload);
+      setMessage('Profile saved successfully.');
+    } catch (error) {
+      setMessage(error.message || 'Unable to save profile.');
+    }
   };
 
   return (

@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const healthRoutes = require('./routes/healthRoutes');
+const profileRoutes = require('./routes/profileRoutes');
 
 const app = express();
 
@@ -31,11 +32,12 @@ app.get('/', (req, res) => {
     success: true,
     app: 'Health & Fitness Tracker API',
     message: 'This is the backend API. Use /api/health to check server status.',
-    endpoints: ['/api/health'],
+    endpoints: ['/api/health', '/api/profile'],
   });
 });
 
 app.use('/api', healthRoutes);
+app.use('/api', profileRoutes);
 
 app.use((err, req, res, next) => {
   console.error('Unexpected server error:', err);

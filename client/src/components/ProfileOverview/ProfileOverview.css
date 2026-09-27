@@ -1,18 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 .profile-page {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px 18px;
-  background: linear-gradient(180deg, #f3f7ff 0%, #eefaf5 100%);
+  background: linear-gradient(180deg, #f5fbff 0%, #edfaf5 100%);
 }
 
 .profile-card {
   width: min(900px, 100%);
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid #e0ebff;
-  border-radius: 26px;
-  box-shadow: 0 20px 50px rgba(22, 62, 168, 0.12);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #e0edf9;
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(42, 111, 216, 0.12);
   padding: 28px;
 }
 
@@ -33,19 +35,22 @@
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1d4ed8, #64c8a1);
+  background: linear-gradient(135deg, #2a6fd8, #62b79f);
   color: white;
   font-size: 2.3rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 12px 24px rgba(29, 78, 216, 0.2);
+  box-shadow: 0 12px 24px rgba(42, 111, 216, 0.2);
+  font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
 .profile-title-wrap h1 {
   margin: 4px 0 0;
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.02em;
 }
 
 .eyebrow {
@@ -54,7 +59,7 @@
   letter-spacing: 0.08em;
   font-size: 0.76rem;
   font-weight: 700;
-  color: #1d4ed8;
+  color: #2a6fd8;
 }
 
 .profile-body {
@@ -78,7 +83,7 @@
 .health-panel h2 {
   margin-top: 0;
   margin-bottom: 16px;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
 .detail-list {
@@ -101,7 +106,7 @@
 
 .detail-list strong,
 .metric-box strong {
-  font-size: 1.1rem;
+  font-size: 1.08rem;
 }
 
 .focus-list {
@@ -111,8 +116,8 @@
 }
 
 .focus-pill {
-  background: #dfe9ff;
-  color: #163ea8;
+  background: linear-gradient(135deg, #e3f5ef, #dfeeff);
+  color: #1a4d77;
   padding: 8px 12px;
   border-radius: 999px;
   font-weight: 700;
@@ -151,7 +156,7 @@
 }
 
 .primary-btn {
-  background: #1d4ed8;
+  background: linear-gradient(135deg, #2a6fd8, #62b79f);
   color: white;
 }
 

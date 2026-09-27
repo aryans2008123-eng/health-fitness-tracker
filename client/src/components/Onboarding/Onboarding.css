@@ -1,38 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 .onboarding-page {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 24px;
-  background: linear-gradient(180deg, #f3f7ff 0%, #eefaf5 100%);
+  background: linear-gradient(180deg, #f5fbff 0%, #edfaf5 100%);
 }
 
 .onboarding-card {
   width: min(760px, 100%);
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #e1ebff;
-  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e3efff;
+  border-radius: 28px;
   padding: 32px;
-  box-shadow: 0 20px 50px rgba(22, 62, 168, 0.12);
+  box-shadow: 0 18px 40px rgba(42, 111, 216, 0.12);
 }
 
 .back-btn {
   border: none;
   background: transparent;
-  color: #1d4ed8;
+  color: #2a6fd8;
   font-weight: 700;
   cursor: pointer;
   margin-bottom: 12px;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
 }
 
 .onboarding-card h1 {
   margin: 0;
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
   margin: 8px 0 26px;
-  color: #5a6b82;
+  color: #5d7386;
+  font-size: 1rem;
 }
 
 .onboarding-form {
@@ -61,6 +67,7 @@ input {
   padding: 12px 14px;
   font-size: 1rem;
   background: #fff;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
 }
 
 .focus-section p {
@@ -82,22 +89,24 @@ input {
   border-radius: 999px;
   font-weight: 700;
   cursor: pointer;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
 }
 
 .chip.selected {
-  background: #1d4ed8;
+  background: linear-gradient(135deg, #2a6fd8, #62b79f);
   color: white;
-  border-color: #1d4ed8;
+  border-color: transparent;
 }
 
 .save-btn {
   border: none;
   border-radius: 12px;
-  background: #1d4ed8;
+  background: linear-gradient(135deg, #2a6fd8, #62b79f);
   color: white;
   padding: 14px 20px;
   font-weight: 700;
   cursor: pointer;
+  box-shadow: 0 12px 22px rgba(42, 111, 216, 0.18);
 }
 
 .message {
