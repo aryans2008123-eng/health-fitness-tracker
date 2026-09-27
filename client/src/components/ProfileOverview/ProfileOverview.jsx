@@ -43,7 +43,7 @@ function ProfileOverview({ profile, onBackHome, onEdit }) {
 
         <div className="profile-body">
           <section className="info-panel">
-            <h2>Basic details</h2>
+            <h2>Details</h2>
             <div className="detail-list">
               <div><span>Age</span><strong>{safeProfile.age || 0}</strong></div>
               <div><span>Weight</span><strong>{safeProfile.weight || 0} kg</strong></div>
