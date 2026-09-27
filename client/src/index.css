@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1d2a36;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #dfe7f1;
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  color: #1f2937;
+}
+
+.status-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-label {
+  margin: 0;
+  font-size: 1rem;
+  color: #58657a;
+}
+
+.status-value {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.status-value.connected {
+  color: #1a7f4a;
+}
+
+.status-value.error {
+  color: #b42318;
+}
