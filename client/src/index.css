@@ -7,13 +7,19 @@ body,
 }
 
 .site-footer {
-  width: 100%;
+  position: relative;
+  z-index: 1;
+  max-width: 740px;
+  margin: 0 auto 18px;
+  padding: 12px 22px;
+  border-radius: 999px;
   text-align: center;
-  padding: 12px 16px 18px;
   font-size: 0.74rem;
-  letter-spacing: 0.04em;
-  color: rgba(29, 42, 56, 0.7);
-  background: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid rgba(42, 111, 216, 0.08);
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: #1d4d34;
+  background: linear-gradient(135deg, rgba(215, 248, 225, 0.96), rgba(239, 255, 243, 0.96));
+  border: 1px solid rgba(73, 153, 103, 0.22);
+  box-shadow: 0 12px 26px rgba(42, 109, 73, 0.12);
 }
 

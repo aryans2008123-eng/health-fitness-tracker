@@ -7,10 +7,22 @@ function LandingPage({ onGetStarted, onOpenContact }) {
 
   return (
     <div className="landing-page">
+      <div className="background-symbols" aria-hidden="true">
+        <span className="symbol leaf leaf-one" />
+        <span className="symbol leaf leaf-two" />
+        <span className="symbol leaf leaf-three" />
+        <span className="symbol pulse pulse-one" />
+        <span className="symbol pulse pulse-two" />
+      </div>
+
       <header className="topbar">
-        <div className="brand" aria-label="Vitalifit logo">
-          <span className="brand-mark">V</span>
-          Vitalifit
+        <div className="brand" aria-label="VitaliFit logo">
+          <span className="brand-mark" aria-hidden="true">
+            <span className="brand-v">V</span>
+            <span className="leaf-spark leaf-left" />
+            <span className="leaf-spark leaf-right" />
+          </span>
+          <span className="brand-text">VitaliFit</span>
         </div>
 
         <nav className="nav">
