@@ -8,9 +8,9 @@ function LandingPage({ onGetStarted, onOpenContact }) {
   return (
     <div className="landing-page">
       <header className="topbar">
-        <div className="brand" aria-label="VitalTrack logo">
+        <div className="brand" aria-label="Vitalifit logo">
           <span className="brand-mark">V</span>
-          VitalTrack
+          Vitalifit
         </div>
 
         <nav className="nav">
@@ -30,7 +30,7 @@ function LandingPage({ onGetStarted, onOpenContact }) {
           </p>
           <p className="supporting-text">
             Your health journey isn't just about numbers or finishing daily tasks.
-            <span className="emphasis-text"> Vital track helps you build a healthy relationship with your body and health</span> by building practiceable daily routines.
+            <span className="emphasis-text"> Vitalifit helps you build a healthy relationship with your body and health</span> by building practiceable daily routines.
           </p>
 
           <div className="cta-row">

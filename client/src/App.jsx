@@ -32,6 +32,13 @@ function App() {
           ? 'theme-blue'
           : 'theme-green';
 
+  const renderPage = (pageContent) => (
+    <div className={`app-shell ${themeClass}`}>
+      {pageContent}
+      <footer className="site-footer">Built and coded by: Aryan Saxena</footer>
+    </div>
+  );
+
   const saveProfile = async (profile) => {
     try {
       const response = await fetch(`${API_BASE_URL}/api/profile`, {
@@ -61,44 +68,34 @@ function App() {
   };
 
   if (currentView === 'onboarding') {
-    return (
-      <div className={`app-shell ${themeClass}`}>
-        <Onboarding
-          profile={userProfile}
-          onBack={() => setCurrentView('landing')}
-          onSave={saveProfile}
-        />
-      </div>
+    return renderPage(
+      <Onboarding
+        profile={userProfile}
+        onBack={() => setCurrentView('landing')}
+        onSave={saveProfile}
+      />
     );
   }
 
   if (currentView === 'profile') {
-    return (
-      <div className={`app-shell ${themeClass}`}>
-        <ProfileOverview
-          profile={userProfile}
-          onBackHome={() => setCurrentView('landing')}
-          onEdit={() => setCurrentView('onboarding')}
-        />
-      </div>
+    return renderPage(
+      <ProfileOverview
+        profile={userProfile}
+        onBackHome={() => setCurrentView('landing')}
+        onEdit={() => setCurrentView('onboarding')}
+      />
     );
   }
 
   if (currentView === 'contact') {
-    return (
-      <div className={`app-shell ${themeClass}`}>
-        <ContactPage onBack={() => setCurrentView('landing')} />
-      </div>
-    );
+    return renderPage(<ContactPage onBack={() => setCurrentView('landing')} />);
   }
 
-  return (
-    <div className={`app-shell ${themeClass}`}>
-      <LandingPage
-        onGetStarted={() => setCurrentView('onboarding')}
-        onOpenContact={() => setCurrentView('contact')}
-      />
-    </div>
+  return renderPage(
+    <LandingPage
+      onGetStarted={() => setCurrentView('onboarding')}
+      onOpenContact={() => setCurrentView('contact')}
+    />
   );
 }
 

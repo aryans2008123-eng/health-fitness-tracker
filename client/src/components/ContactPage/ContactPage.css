@@ -1,15 +1,15 @@
 .contact-page {
-  min-height: 100vh;
+  min-height: calc(100vh - 48px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px 18px;
+  padding: 28px 18px 16px;
   background: linear-gradient(180deg, #f3f9ff 0%, #f1fbf6 100%);
 }
 
 .contact-card {
   width: min(620px, 100%);
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.94);
   border: 1px solid #e0edf9;
   border-radius: 24px;
   padding: 28px;
@@ -41,19 +41,39 @@
   font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
+.contact-summary {
+  margin: 0 0 18px;
+  color: #415d77;
+  line-height: 1.7;
+}
+
 .contact-box {
   border: 1px solid #dfeaf7;
   background: linear-gradient(135deg, #f7fbff, #eefcf7);
   border-radius: 18px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.contact-box.secondary {
+  margin-top: 14px;
 }
 
 .contact-box p {
-  margin: 0 0 8px;
+  margin: 0;
   color: #536b7f;
 }
 
 .contact-box strong {
-  font-size: 1.25rem;
+  font-size: 1.22rem;
   color: #1d2a38;
+}
+
+.contact-box a {
+  color: #2a6fd8;
+  text-decoration: none;
+  font-weight: 600;
 }
