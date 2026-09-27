@@ -1,14 +1,22 @@
 import './LandingPage.css';
 
-function LandingPage({ onGetStarted }) {
+function LandingPage({ onGetStarted, onOpenContact }) {
+  const scrollToFeatures = () => {
+    document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="landing-page">
       <header className="topbar">
-        <div className="brand">VitalTrack</div>
+        <div className="brand" aria-label="VitalTrack logo">
+          <span className="brand-mark">V</span>
+          VitalTrack
+        </div>
+
         <nav className="nav">
           <a href="#features">Features</a>
           <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <button type="button" className="nav-contact" onClick={onOpenContact}>Contact</button>
         </nav>
       </header>
 
@@ -20,10 +28,14 @@ function LandingPage({ onGetStarted }) {
             Monitor workouts, nutrition, daily movement, and long-term goals in one
             simple place.
           </p>
+          <p className="supporting-text">
+            Your health journey isn't just about numbers or finishing daily tasks.
+            <span className="emphasis-text"> Vital track helps you build a healthy relationship with your body and health</span> by building practiceable daily routines.
+          </p>
 
           <div className="cta-row">
             <button className="primary-btn" onClick={onGetStarted}>Get Started</button>
-            <button className="secondary-btn">View Plans</button>
+            <button type="button" className="secondary-btn" onClick={scrollToFeatures}>View Plans</button>
           </div>
 
           <div className="stats-row">
