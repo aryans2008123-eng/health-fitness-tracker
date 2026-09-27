@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const healthRoutes = require('./routes/healthRoutes');
 
 const app = express();
 
@@ -11,13 +12,7 @@ app.use(
 );
 
 app.use(express.json());
-
-app.get('/api/health', (req, res) => {
-  res.json({
-    success: true,
-    message: 'Health Tracker API is running',
-  });
-});
+app.use('/api', healthRoutes);
 
 app.use((err, req, res, next) => {
   console.error('Unexpected server error:', err);
