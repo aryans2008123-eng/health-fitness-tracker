@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import LandingPage from './components/LandingPage/LandingPage';
 import Onboarding from './components/Onboarding/Onboarding';
+import ProfileOverview from './components/ProfileOverview/ProfileOverview';
 
 function App() {
   const [currentView, setCurrentView] = useState('landing');
@@ -22,8 +23,18 @@ function App() {
         onBack={() => setCurrentView('landing')}
         onSave={(profile) => {
           setUserProfile(profile);
-          setCurrentView('landing');
+          setCurrentView('profile');
         }}
+      />
+    );
+  }
+
+  if (currentView === 'profile') {
+    return (
+      <ProfileOverview
+        profile={userProfile}
+        onBackHome={() => setCurrentView('landing')}
+        onEdit={() => setCurrentView('onboarding')}
       />
     );
   }
