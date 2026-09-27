@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react';
 import './HealthStatus.css';
 
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  (window.location.hostname === 'localhost'
+    ? 'http://localhost:5000'
+    : 'https://health-fitness-tracker-backend-qcu8.onrender.com');
+
 function HealthStatus() {
   const [backendStatus, setBackendStatus] = useState('Checking...');
   const [isConnected, setIsConnected] = useState(false);
@@ -8,7 +14,7 @@ function HealthStatus() {
   useEffect(() => {
     async function checkBackend() {
       try {
-        const response = await fetch('/api/health');
+        const response = await fetch(`${API_BASE_URL}/api/health`);
         const data = await response.json();
 
         if (response.ok && data.success) {
